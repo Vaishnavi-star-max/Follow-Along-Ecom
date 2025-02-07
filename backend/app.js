@@ -1,6 +1,6 @@
 let express= require("express")
-const ErrorHandler = require("./utils/Errorhandler");
-const catchAsyncErrors = require("./middleware/catchAsyncError")
+//const ErrorHandler = require("./utils/Errorhandler");
+//const catchAsyncErrors = require("./middleware/catchAsyncError")
 const{UserModel}=require("./model/usermodel")
 const userRoute=require("./controllers/userRoute")
 

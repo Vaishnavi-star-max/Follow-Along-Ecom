@@ -4,7 +4,7 @@ const connection = require("./db/connection")
 
 const port=process.env.PORT 
 
-app.get("/shop",async(req,res)=>{
+app.get("/test",async(req,res)=>{
     res.send("HELLO....")
 })
 app.listen(port,async()=>{

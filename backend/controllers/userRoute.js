@@ -6,6 +6,7 @@ const bcrypt=require("bcrypt")
 const jwt=require("jsonwebtoken")
 const { sendMail } =require("../utils/mail")
 let userRoute= express.Router()
+const upload=require("../middleware/multer")
 
   
 
@@ -103,7 +104,37 @@ userRoute.post("/login", async (req, res) => {
 
   }))
 
+  userRoute.post("/upload", upload.single("photo"),catchAsyncError(async(req,res,next)=>{
+    if(!req.file){
+      next(new Errorhadler("File not found",400))
+    }
 
+    res.status(200).json("Uploaded")
+}))
 
+  userRoute.post("/login",catchAsyncError(async(req,res,next)=>{
+    const {email,password}=req.body
+    if (!email || !password){
+      next(new Errorhadler("email and password are required",400));
+    }
+    let user =UserModel.findOne({email})
+    if(!user){
+      next(new Errorhadler("please signup before login",400));
+    }
+    if(!user.isActivated){
+      next(new Errorhadler("please signup before login",400))
+    }
+    let isMatching =await bcrypt.compare(password,user.password);
+    if(!isMatching){
+      next(new Errorhadler("password is incorrect ",400));
+    }
+    let token=jwt.sign({id:user._id},process.env.ACCESS,{expiresIn: 60*60*60*24*30})
+
+    res.cookies("accesstoken",token,{
+      httpOnly:true,
+      MaxAge:"7d"
+    })
+    res.status(200).json({status:true,message:"login successful"})
+  }))    
 
   module.exports=userRoute
