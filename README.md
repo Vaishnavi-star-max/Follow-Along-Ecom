@@ -31,10 +31,10 @@ The backend server is now fully set up to be expanded with more features.
 
 In this milestone, the following features were added:
 
-1. **User Model**: A schema for the user with fields for `name`, `email`, `password`, `isAdmin`, and an optional `profilePicture` for storing user profile pictures.
-2. **User Controller**: Includes functions for:
-   - **User Registration**: Allows new users to register.
-   - **User Login**: Validates the user's credentials and returns a JWT token.
-   - **User Profile**: Fetches the user profile based on the JWT token.
-3. **Multer for File Uploads**: Configured Multer to allow users to upload profile pictures, with validation for file types and size.
-4. **Protected Routes**: Added authentication middleware to protect certain routes, such as fetching the user profile and uploading the profile picture.
+1. *User Model*: A schema for the user with fields for `name`, `email`, `password`, `isAdmin`, and an optional `profilePicture` for storing user profile pictures.
+2. *User Controller*: Includes functions for:
+   - User Registration: Allows new users to register.
+   - User Login: Validates the user's credentials and returns a JWT token.
+   - User Profile: Fetches the user profile based on the JWT token.
+3. *Multer for File Uploads*: Configured Multer to allow users to upload profile pictures, with validation for file types and size.
+4. *Protected Routes*: Added authentication middleware to protect certain routes, such as fetching the user profile and uploading the profile picture.
