@@ -58,3 +58,26 @@ In this milestone, we will create a Sign-Up Page that allows users to register f
 Use JavaScript to validate the input fields. 
 Email format: Ensure the email follows a valid format.
 Password criteria: Ensure the password is strong (e.g., minimum length, contains at least one number, special character, etc.).
+
+
+## Milestone 6:
+
+In this milestone, I’ve implemented password encryption using bcrypt. The user's password is hashed during the signup process before being stored in the database. This ensures that the password is never saved in plain text, enhancing the security of the user's data.
+
+1. Encrypt the Password:
+I used bcrypt to hash the password with a salt factor, which makes it more secure.
+The hashing process ensures that even if the database is compromised, the passwords remain protected.
+
+2. Store Complete User Data:
+In addition to the hashed password, all other user data such as name and email is securely saved in the database. This ensures that sensitive information is protected and only the hashed password is stored.
+
+I created a User schema for storing the user's name, email, and hashed password in the database.
+The database will store the complete user information while ensuring that the password is never exposed.
+
+3. Testing Password Encryption and Secure Storage
+I tested the password encryption and storage process to ensure that:
+
+The password is hashed and not stored in plain text.
+The user’s name and email are saved correctly.
+During login, the password verification process compares the entered password with the stored hashed password.
+
