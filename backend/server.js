@@ -2,7 +2,7 @@ const{app}=require("./app")
 require("dotenv").config()
 const connection = require("./db/connection")
 
-const port=process.env.PORT 
+const port=process.env.PORT  
 
 app.get("/test",async(req,res)=>{
     res.send("HELLO....")
@@ -16,5 +16,5 @@ app.listen(port,async()=>{
     catch(err){
         console.log(err)
     }
-    
+
 })

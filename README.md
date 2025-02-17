@@ -38,3 +38,5 @@ In this milestone, the following features were added:
    - User Profile: Fetches the user profile based on the JWT token.
 3. *Multer for File Uploads*: Configured Multer to allow users to upload profile pictures, with validation for file types and size.
 4. *Protected Routes*: Added authentication middleware to protect certain routes, such as fetching the user profile and uploading the profile picture.
+
+## Milestone 5:
