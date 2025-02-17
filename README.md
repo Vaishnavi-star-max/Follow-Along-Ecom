@@ -40,3 +40,21 @@ In this milestone, the following features were added:
 4. *Protected Routes*: Added authentication middleware to protect certain routes, such as fetching the user profile and uploading the profile picture.
 
 ## Milestone 5:
+
+In this milestone, we will create a Sign-Up Page that allows users to register for an account. The page will include necessary fields for input, such as name, email, and password. We'll also implement form validation to ensure the data entered is correct and follows appropriate formats.
+
+# Objectives:
+1. Build a Sign-Up page using HTML and CSS.
+2. Implement form validation using JavaScript to ensure user input is correct:
+3. Validate that the email follows a proper email format.
+4. Ensure the password meets security requirements (e.g., minimum length, special characters).
+
+# Features:
+1. User-friendly form layout.
+2. Client-side validation for fields like email and password.
+3. Responsive design that works on various devices (mobile, tablet, desktop).
+
+# JavaScript for Form Validation:
+Use JavaScript to validate the input fields. 
+Email format: Ensure the email follows a valid format.
+Password criteria: Ensure the password is strong (e.g., minimum length, contains at least one number, special character, etc.).
