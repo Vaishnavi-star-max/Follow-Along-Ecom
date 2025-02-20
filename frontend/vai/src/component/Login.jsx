@@ -29,12 +29,12 @@ function Login(props) {
             Password
           </label>
           <div className="flex  w-8/10 m-auto">
-            <input
+           <input
               type= {hide?"password":"text"}
+          
               className="border-1 w-[88%] block m-auto h-8 rounded-md rounded-bl-md"/>
-
-              {hide?<FaRegEye className="w-[12%] h-5 mt-1" onClick={handlehide}/>:<FaRegEyeSlash onClick={handlehide}/>}
-            
+              
+              {/* {hide?<FaRegEye className="W-[12%] h-5 mt-1" onClick={handlehide}/>:<FaRegEyeSlash onClick={handlehide}/>}  */}
           </div>
 
           <div className="flex m-auto mt-5  w-[80%]  justify-between ">
