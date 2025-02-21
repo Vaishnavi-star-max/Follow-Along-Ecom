@@ -8,7 +8,7 @@ const { sendMail } =require("../utils/mail")
 let userRoute= express.Router()
 const upload=require("../middleware/multer")
 
-  
+
 
 
 userRoute.post("/login", async (req, res) => {
@@ -104,13 +104,6 @@ userRoute.post("/login", async (req, res) => {
 
   }))
 
-  userRoute.post("/upload", upload.single("photo"),catchAsyncError(async(req,res,next)=>{
-    if(!req.file){
-      next(new Errorhadler("File not found",400))
-    }
-
-    res.status(200).json("Uploaded")
-}))
 
   userRoute.post("/login",catchAsyncError(async(req,res,next)=>{
     const {email,password}=req.body
@@ -135,6 +128,15 @@ userRoute.post("/login", async (req, res) => {
       MaxAge:"7d"
     })
     res.status(200).json({status:true,message:"login successful"})
-  }))    
+  })) 
+
+  userRoute.post("/upload", upload.single("photo"),catchAsyncError(async(req,res,next)=>{
+    if(!req.file){
+      next(new Errorhadler("File not found",400))
+    }
+
+    res.status(200).json("Uploaded")
+}))
+
 
   module.exports=userRoute

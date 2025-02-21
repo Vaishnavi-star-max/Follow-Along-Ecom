@@ -81,3 +81,4 @@ The password is hashed and not stored in plain text.
 The user’s name and email are saved correctly.
 During login, the password verification process compares the entered password with the stored hashed password.
 
+### Milestone 7:
