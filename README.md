@@ -81,4 +81,32 @@ The password is hashed and not stored in plain text.
 The user’s name and email are saved correctly.
 During login, the password verification process compares the entered password with the stored hashed password.
 
-### Milestone 7:
+### Milestone 7: User Login Backend
+
+Overview:
+ In this milestone, we will create a backend endpoint for user login. The focus is on validating user credentials and verifying the encrypted password stored in the database using bcrypt.
+
+Why Encrypt Passwords?
+Protect User Data: Keeps passwords safe even if the database is compromised.
+
+Privacy: Ensures passwords aren't stored in plain text.
+
+Compliance: Meets security standards like GDPR and PCI-DSS.
+
+Prevents Password Theft: Hashed passwords are difficult to decipher, increasing security.
+
+How Login Authentication Works:
+
+User Enters Credentials
+The user provides their email/username and password on the login page.
+
+Fetch User Data from Database:
+
+The backend retrieves the user record based on the provided email/username.
+If the user is not found, return an error: "User does not exist."
+
+Compare Encrypted Passwords:
+
+Process the user's input password using the same hashing algorithm (e.g., bcrypt).
+Compare the resulting hash to the stored hashed password.
+
