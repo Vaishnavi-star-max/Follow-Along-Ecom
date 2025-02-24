@@ -1,5 +1,5 @@
 let express=require("express")
-const { UserModel } = require("../model/usermodel");
+const { UserModel } = require("../model/userModel");
 const catchAsyncError = require("../middleware/catchAsyncError");
 const Errorhadler=require("../utils/Errorhandler")
 const bcrypt=require("bcrypt")

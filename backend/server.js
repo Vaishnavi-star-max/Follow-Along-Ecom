@@ -2,6 +2,8 @@ const{app}=require("./app")
 require("dotenv").config()
 const connection = require("./db/connection")
 
+const userRoute = require('./controllers/userRoute');
+
 const port=process.env.PORT  
 
 app.get("/test",async(req,res)=>{

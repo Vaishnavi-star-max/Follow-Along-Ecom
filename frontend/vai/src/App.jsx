@@ -6,7 +6,7 @@ import Loginpage from "./pages/Loginpage"
 import Navbar from "./pages/Navbar";
 import Login from "./component/Login";
 import Signup from "./component/signup";
-import CreateProduct from "./pages/CreateProduct";
+import CreateProduct from "./component/CreateProduct";
 
 function App() {
 
