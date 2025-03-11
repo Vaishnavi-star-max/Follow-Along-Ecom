@@ -7,7 +7,7 @@ import Navbar from "./pages/Navbar";
 import Login from "./component/Login";
 import Signup from "./component/signup";
 import CreateProduct from "./component/CreateProduct";
-
+import SellerProcutPage from "./pages/SellerProductPage"
 function App() {
 
   return (
@@ -16,7 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/Login" element={<Loginpage />}></Route>
-        <Route path="/create" element={<CreateProduct/>}></Route>
+       <Route path="/create" element={<CreateProduct/>}></Route>
+       <Route path="/modify" element={<SellerProcutPage/>}></Route>
+
       </Routes>
     </BrowserRouter>
   );

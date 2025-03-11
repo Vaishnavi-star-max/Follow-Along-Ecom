@@ -23,7 +23,20 @@ const addressSchema=mongoose.Schema({
         type:String
     }
 
+})
 
+const cartSchema=mongoose.Schema({
+    productId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Product",
+        require: true,
+    },
+    quantity:{
+        type:Number,
+        require:true,
+        min:[1,"Quantity cannot be less than 1"],
+        default:1,
+    },
 })
 
 const userschema=mongoose.Schema({
@@ -33,7 +46,7 @@ name: {
 },
 
 email: {
-  type:String,
+  type:String, 
   required:true
 
 },
@@ -52,8 +65,8 @@ address:{
 isActivated:{
    type:Boolean,
    default:false
-}
-
+},
+cart:[cartSchema]
 
 
 })

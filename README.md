@@ -207,3 +207,116 @@ Future Enhancements 🚀
 Implement user authentication to automatically get the logged-in user's email.
 Allow pagination for large product lists.
 Add sorting and filtering options (e.g., by price, category).
+
+
+## Milestone 13: Filtering Products by User Email
+
+### Project Overview
+
+Created an API endpoint to retrieve product data filtered by user email, ensuring users see only their uploaded products.
+
+### Key Achievements
+
+- *Filtered API Endpoint:* Retrieves products associated with a specific user.
+- *Frontend Integration:* Dynamically displays filtered products.
+- *Improved User Experience:* Personalized product display.
+
+### Future Enhancements
+
+- Implement authentication to auto-fetch the logged-in user's products.
+- Add pagination for large product lists.
+- Introduce sorting and filtering options (e.g., price, category).
+
+## Milestone 14: Deleting Products by ID
+
+### Project Overview
+
+This milestone focuses on implementing a *delete functionality* for uploaded products. Users can now remove a product from the database by clicking a *Delete* button, which sends the product ID to the backend for deletion.
+
+### Key Achievements
+
+- *Delete API Endpoint:* Allows products to be deleted using their unique ID.
+- *Frontend Integration:* Added a Delete button to product cards.
+- *Improved User Experience:* Users can remove unwanted products easily.
+
+### Future Enhancements
+
+- Implement a confirmation prompt before deletion.
+- Add authentication to ensure only the product owner can delete.
+- Introduce a soft delete feature to allow recovery of deleted products.
+
+## Milestone 15: Creating a Navbar Component
+
+### Project Overview
+
+This milestone focuses on creating a *Navbar component* and integrating it into all pages to ensure smooth navigation across the application.
+
+### Key Achievements
+
+- *Reusable Navbar Component:* A single component used across multiple pages.
+- *Navigation Links:* Added links to Home, My Products, Add Product, and Cart.
+- *Responsive Design:* Ensured the Navbar adapts to different screen sizes.
+- *Improved User Experience:* Simplified navigation across the application.
+
+### Future Enhancements
+
+- Implement authentication-based navigation (e.g., hide/show links based on login status).
+- Add dropdown menus for better organization.
+- Enhance styling for a more user-friendly experience.
+
+## Milestone 16: Creating a Product Info Page
+
+### Project Overview
+
+This milestone focuses on creating a *Product Info Page* that displays all product details and allows users to select a quantity and add the item to their cart.
+
+### Key Achievements
+
+- *Detailed Product Page:* Displays all relevant product information.
+- *Quantity Selector:* Users can choose the quantity of the product they want to purchase.
+- *Add to Cart Button:* Enables users to add selected products to their cart.
+- *Improved Shopping Experience:* Provides a seamless way to view and purchase products.
+
+### Future Enhancements
+
+- Implement a dynamic cart system with real-time updates.
+- Add product image carousel for better visualization.
+- Introduce customer reviews and ratings on the product page.
+
+## Milestone 17: Adding Cart Functionality
+
+### Project Overview
+
+This milestone focuses on implementing *cart functionality* by creating an endpoint to add products to the cart and store them in the database.
+
+### Key Achievements
+
+- *Updated User Schema:* Modified schema to store cart products.
+- *Cart API Endpoint:* Created an endpoint to receive and store product details in the cart.
+- *Database Integration:* Successfully saved cart data in MongoDB.
+- *Enhanced Shopping Experience:* Allowed users to add items to their cart for later purchase.
+
+### Future Enhancements
+
+- Implement cart quantity updates and item removal.
+- Add authentication to associate carts with specific users.
+- Introduce a checkout process with payment integration.
+
+## Milestone 18: Fetching Cart Data
+
+### Project Overview
+
+This milestone focuses on implementing a *backend endpoint* to fetch all products stored in a user's cart and display them on the cart page.
+
+### Key Achievements
+
+- *Cart API Endpoint:* Created an endpoint to retrieve all products inside a user's cart.
+- *User-Based Filtering:* Implemented logic to fetch cart items based on user email.
+- *Database Integration:* Successfully retrieved cart data from MongoDB.
+- *Improved User Experience:* Allowed users to view their saved cart items.
+
+### Future Enhancements
+
+- Implement real-time cart updates with WebSockets.
+- Add authentication to secure user-specific cart data.
+- Enhance cart UI to allow quantity updates and removals directly from the cart page.

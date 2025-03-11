@@ -15,8 +15,8 @@ app.listen(port,async()=>{
       await connection
       console.log(`app is running on http://localhost:${port}`)
     } 
-    catch(err){
-        console.log(err)
+    catch(error){
+        console.log(error)
     }
 
 })
